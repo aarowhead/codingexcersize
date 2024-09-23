@@ -4,9 +4,8 @@ interface SystemMessageRepository {
     suspend fun getSystemStatusMessage(): String?
 }
 
-class SystemMessageRepositoryImpl : SystemMessageRepository {
+class MockSystemMessageRepository : SystemMessageRepository {
     override suspend fun getSystemStatusMessage(): String {
-
-        return "System is Normal"
+        return "Login successful"
     }
 }
